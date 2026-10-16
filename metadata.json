@@ -1,0 +1,11 @@
+{
+  "name": "Remix Remix ReadMind AI - Trợ lý luyện đọc hiểu thông minh",
+  "description": "Ứng dụng luyện đọc hiểu Ngữ văn THCS lớp 6-9 theo Chương trình GDPT 2018 (Kết nối tri thức), tích hợp luyện đọc biểu cảm, phân tích câu hỏi thông minh, trò chơi học tập và trợ lý ReadMind AI.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #F4FAFF;
+    --bg-card: #FFFFFF;
+    --text-primary: #102A43;
+    --text-secondary: #61758A;
+    --color-primary: #00A99D;
+    --color-secondary: #3285E8;
+    --color-accent: #F2B544;
+    --color-accent-dark: #C07D2B;
+    --color-border: #E0EBF4;
+
+    /* Pastels */
+    --pastel-blue: #EAF6FF;
+    --pastel-mint: #E0F8F3;
+    --pastel-pink: #FFF0F5;
+    --pastel-purple: #F1EBFF;
+    --pastel-amber: #FFF8E7;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+.font-serif-literary,
+.font-serif-academic {
+  font-family: 'Playfair Display', Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* 3D Perspective utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Modern Educational Card Styling */
+.edu-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.edu-card:hover {
+  border-color: #BDE4FF;
+  box-shadow: 0 12px 30px -8px rgba(16, 42, 67, 0.08), 0 4px 12px -2px rgba(16, 42, 67, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Educational Action Buttons */
+.btn-primary-teal {
+  background-color: #00A99D;
+  color: #FFFFFF;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 169, 157, 0.25);
+}
+
+.btn-primary-teal:hover {
+  background-color: #009388;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 169, 157, 0.35);
+}
+
+.btn-primary-teal:active {
+  transform: scale(0.97);
+}
+
+.btn-accent-amber {
+  background-color: #C07D2B;
+  color: #FFFFFF;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(192, 125, 43, 0.25);
+}
+
+.btn-accent-amber:hover {
+  background-color: #A86A20;
+  transform: translateY(-1px);
+}
+
+.btn-soft-pastel {
+  background-color: #EAF6FF;
+  color: #102A43;
+  border: 1px solid #D0E7FA;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-soft-pastel:hover {
+  background-color: #D9EFFF;
+  border-color: #B5DCF7;
+}
+
+/* Custom Scrollbar for clean reading */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4FAFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBDCEB;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9DBFD9;
+}
+
+/* Ripple effect container */
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-wave {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  background-color: rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Audio wave pulse animation */
+@keyframes wave1 { 0%, 100% { height: 6px; } 50% { height: 22px; } }
+@keyframes wave2 { 0%, 100% { height: 18px; } 50% { height: 8px; } }
+@keyframes wave3 { 0%, 100% { height: 12px; } 50% { height: 26px; } }
+@keyframes wave4 { 0%, 100% { height: 24px; } 50% { height: 10px; } }
+
+.animate-wave-1 { animation: wave1 1.1s ease-in-out infinite; }
+.animate-wave-2 { animation: wave2 0.9s ease-in-out infinite; }
+.animate-wave-3 { animation: wave3 1.2s ease-in-out infinite; }
+.animate-wave-4 { animation: wave4 1.0s ease-in-out infinite; }
